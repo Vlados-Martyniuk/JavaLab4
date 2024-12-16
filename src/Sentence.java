@@ -1,3 +1,6 @@
+/**
+ * Клас, що представляє речення, яке складається зі слів і пунктуації.
+ */
 import java.util.ArrayList;
 import java.util.List;
 
@@ -5,6 +8,11 @@ public class Sentence {
     private List<Word> words;
     private Punctuation punctuation;
 
+    /**
+     * Конструктор для створення об'єкта речення.
+     *
+     * @param sentence текстове представлення речення
+     */
     public Sentence(String sentence) {
         words = new ArrayList<>();
         String[] wordArray = sentence.trim().split("\\s+");
@@ -17,14 +25,29 @@ public class Sentence {
         }
     }
 
+    /**
+     * Повертає список слів у реченні.
+     *
+     * @return список слів
+     */
     public List<Word> getWords() {
         return words;
     }
 
+    /**
+     * Повертає пунктуацію в кінці речення.
+     *
+     * @return пунктуаційний символ або null, якщо відсутній
+     */
     public Punctuation getPunctuation() {
         return punctuation;
     }
 
+    /**
+     * Повертає текстове представлення речення.
+     *
+     * @return речення як рядок
+     */
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();

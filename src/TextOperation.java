@@ -1,6 +1,15 @@
+/**
+ * Клас, що виконує операції над текстом.
+ */
 import java.util.List;
 
 public class TextOperation {
+    /**
+     * Міняє місцями перше і останнє слова в кожному реченні тексту.
+     *
+     * @param text текст, який потрібно обробити
+     * @return оброблений текст
+     */
     public Text processText(Text text) {
         List<Sentence> sentences = text.getSentences();
 
